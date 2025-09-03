@@ -1,1 +1,380 @@
-<h1> mi portafolio</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transporte Carranza</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+  </head>
+
+<body>
+
+  <!-- Contenedor del Chatbot -->
+  <div class="chatbot-container" id="chatbot">
+    <div class="chatbot-header">
+      <span>🚛 Asistente Virtual TC</span>
+      <button id="close-chatbot">✖</button>
+    </div>
+    <div class="chatbot-mensajes" id="chat-messages">
+      <!-- Los mensajes se añadirán aquí dinámicamente -->
+    </div>
+    <div class="chatbot-input">
+      <input type="text" id="user-input" placeholder="Escribe tu mensaje..." required>
+      <button id="send-message">Enviar</button>
+    </div>
+  </div>
+
+  <!-- Botón para abrir el chatbot -->
+  <button class="abrir-chatbot" id="chatbot-toggle">💬</button>
+
+  <header class="navbar">
+    <div class="container navbar-flex">
+      <div class="logo-container">
+        <div class="logo-column">
+          <img src="LOGO.jpg" alt="Logo de Transporte" class="logo-img" />
+          <p class="logo-sub"><strong class="tracasa-text">TRACASA</strong></p>
+        </div>
+        <h1 class="logo-text logo-text-red">Transporte Carranza S.A</h1>
+      </div>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#cotizacion-seccion">Cotización</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#reporte-manejo">Reporte de manejo</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <h2>Soluciones de Transporte Confiables y Eficientes</h2>
+      <p>Especialistas en carga seca, refrigerada, cisternas y mesas en todo Panamá.</p>
+      <a href="#cotizacion-seccion" class="btn-cotiza">Solicita una Cotización</a>
+    </div>
+  </section>
+
+  <section class="descripcion bg-light-gray">
+    <div class="container">
+      <p>
+        Somos una empresa panameña dedicada al transporte de carga nacional, adaptándonos a cada necesidad logística de nuestros clientes con responsabilidad, puntualidad y una flota altamente especializada.
+      </p>
+    </div>
+  </section>
+
+  <section id="servicios" class="servicios bg-white">
+    <div class="container">
+      <h2 class="seccion-titulo">Nuestros Servicios</h2>
+      <div class="servicios-grid">
+        <div class="servicio tooltip">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="black" width="48" height="48">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7l9 5 9-5m-18 0l9-5 9 5m-18 0v10l9 5 9-5V7"/>
+          </svg>
+          <h3>Carga Seca</h3>
+          <span class="tooltip-text">Contenedores de 24, 48 y 53 pies para carga general.</span>
+        </div>
+
+        <div class="servicio tooltip">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="black" width="48" height="48">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2v20m0-10l6-6m-6 6l-6-6m6 6l6 6m-6-6l-6 6"/>
+          </svg>
+          <h3>Carga Refrigerada</h3>
+          <span class="tooltip-text">Contenedores refrigerados de 24 y 56 pies.</span>
+        </div>
+
+        <div class="servicio tooltip">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="black" width="48" height="48">
+            <rect x="3" y="7" width="18" height="10" rx="2" ry="2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 7v10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h3>Cisternas</h3>
+          <span class="tooltip-text">Cisternas de 4,000 galones para líquidos.</span>
+        </div>
+
+        <div class="servicio tooltip">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="black" width="48" height="48">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 13h13l3 4h2a1 1 0 011 1v2h-2a2 2 0 11-4 0h-8a2 2 0 11-4 0H3v-6z"/>
+          </svg>
+          <h3>Carga en Mesas</h3>
+          <span class="tooltip-text">Flatbeds de 48 pies para estructuras pesadas.</span>
+        </div>
+
+        <div class="servicio tooltip">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="black" width="48" height="48">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3h6v2H9V3zm9 4v12a2 2 0 01-2 2H8a2 2 0 01-2-2V7h12zm0 0h1a1 1 0 011 1v4a1 1 0 01-1 1h-1"/>
+          </svg>
+          <h3>Mesa Botellera</h3>
+          <span class="tooltip-text">Contamos con mesas botelleras para contenedores de 53 pies.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="carrusel bg-light-gray">
+  <div class="carrusel-contenedor">
+       <h2 class="seccion-titulo red-title">Galeria de Flota</h2>
+    <div class="slide"><img src="img/foto1.jpg" alt="Imagen 1"></div>
+    <div class="slide"><img src="img/foto2.jpg" alt="Imagen 2"></div>
+    <div class="slide"><img src="img/foto3.jpg" alt="Imagen 3"></div>
+    <div class="slide"><img src="img/foto4.jpg" alt="Imagen 4"></div>
+    <div class="slide"><img src="img/foto5.jpg" alt="Imagen 5"></div>
+    <div class="slide"><img src="img/foto6.jpg" alt="Imagen 6"></div>
+    <div class="slide"><img src="img/foto7.jpg" alt="Imagen 7"></div>
+  </div>
+  <button class="carrusel-btn prev" onclick="prevSlideManual()">&#10094;</button>
+  <button class="carrusel-btn next" onclick="nextSlideManual()">&#10095;</button>
+  <div class="carrusel-dots" id="carrusel-dots">
+    </div>
+</section>
+
+  <section id="cotizacion-seccion" class="cotizacion bg-light-gray">
+    <div class="container">
+      <h2 class="seccion-titulo red-title">Cotización</h2>
+      <form class="formulario-cotizacion" onsubmit="return false;">
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="tipo-carga">Tipo de carga</label>
+            <select id="tipo-carga" name="Tipo de carga" required>
+              <option value="">Seleccione...</option>
+              <option value="Carga seca">Carga seca</option>
+              <option value="Carga refrigerada">Carga refrigerada</option>
+              <option value="Cisterna">Cisterna</option>
+              <option value="Carga en mesas">Carga en mesas (flatbed)</option>
+              <option value="Mesa Botellera">Mesa Botellera</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="origen">Origen</label>
+            <input type="text" id="origen" name="Origen" required placeholder="Ej. Ciudad de Panamá" />
+          </div>
+
+          <div class="form-group">
+            <label for="destino">Destino</label>
+            <input type="text" id="destino" name="Destino" required placeholder="Ej. David, Chiriquí" />
+          </div>
+
+          <div class="form-group">
+            <label for="peso">Peso estimado (kg)</label>
+            <input type="number" id="peso" name="Peso estimado" min="1" required />
+          </div>
+
+          <div class="form-group">
+            <label for="urgencia">Urgencia del transporte</label>
+            <select id="urgencia" name="Urgencia" required>
+              <option value="">Seleccione...</option>
+              <option value="Normal">Normal (3-5 días)</option>
+              <option value="Urgente">Urgente (24-48h)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="contacto">Nombre y contacto</label>
+            <input type="text" id="contacto" name="Nombre y contacto" required placeholder="Ej. Juan Pérez, 6666-7777" />
+          </div>
+        </div>
+
+        <div class="form-boton">
+          <button type="button" class="btn-cotiza" onclick="calcularCotizacionFormulario()">Calcular Cotización</button>
+        </div>
+      </form>
+
+      <div id="resultado-formulario-cotizacion">
+        <!-- La cotización generada se insertará aquí -->
+      </div>
+    </div>
+  </section>
+
+
+<section id="calculadora-seccion" class="calculadora bg-light-gray">
+  <div class="container">
+    <h2 class="seccion-titulo">Calculadora de Volumen/Peso</h2>
+    <p class="calculadora-intro">Estima el volumen cúbico o el peso volumétrico de tu carga para una cotización más precisa.</p>
+
+    <div class="calculadora-herramienta">
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="largo">Largo (metros)</label>
+          <input type="number" id="largo" min="0.01" step="0.01" placeholder="Ej. 1.5" required>
+        </div>
+        <div class="form-group">
+          <label for="ancho">Ancho (metros)</label>
+          <input type="number" id="ancho" min="0.01" step="0.01" placeholder="Ej. 1.2" required>
+        </div>
+        <div class="form-group">
+          <label for="alto">Alto (metros)</label>
+          <input type="number" id="alto" min="0.01" step="0.01" placeholder="Ej. 1.0" required>
+        </div>
+        <div class="form-group">
+          <label for="cantidad">Cantidad de bultos/cajas</label>
+          <input type="number" id="cantidad" min="1" step="1" value="1" required>
+        </div>
+      </div>
+
+      <div class="form-boton">
+        <button type="button" class="btn-cotiza" onclick="calcularVolumenPeso()">Calcular</button>
+      </div>
+
+      <div class="calculadora-resultado" id="calculadora-resultado" style="display:none;">
+        <h3>Resultados de la Carga:</h3>
+        <p><strong>Volumen Cúbico Total:</strong> <span id="resultado-volumen"></span> m³</p>
+        <p><strong>Peso Volumétrico Estimado:</strong> <span id="resultado-peso-volumetrico"></span> kg</p>
+        <p class="nota-resultado">**Nota:** Este es un valor estimado. El costo final puede variar según la carga real y otros factores.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="faq-seccion" class="faq bg-white">
+  <div class="container">
+    <h2 class="seccion-titulo">Preguntas Frecuentes</h2>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h3>¿Qué tipos de carga transportan?</h3>
+        <p>Transportamos carga seca, refrigerada, en cisternas y en mesas (flatbed) para estructuras pesadas.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿A qué destinos llegan sus servicios?</h3>
+        <p>Realizamos transporte de carga a nivel nacional en todo Panamá, cubriendo las principales ciudades y provincias.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Cómo puedo solicitar una cotización?</h3>
+        <p>Puedes solicitar una cotización a través de nuestro formulario en línea en la sección "Cotización", o contactándonos directamente por teléfono o correo electrónico.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Ofrecen seguro para la carga?</h3>
+        <p>Sí, su carga está asegurada durante el transporte. Para detalles específicos sobre la cobertura, por favor, contáctenos.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Cuáles son los tiempos de entrega estimados?</h3>
+        <p>Los tiempos de entrega varían según el origen, destino y tipo de carga. Ofrecemos opciones de servicio normal (3-5 días) y urgente (24-48 horas).</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Cómo calculo el volumen o peso de mi carga?</h3>
+        <p>Hemos añadido una calculadora de volumen/peso en la sección "Calculadora" de nuestra página web para que obtengas una estimación.</p>
+      </div>
+      </div>
+  </div>
+</section>
+
+  <section id="reporte-manejo" class="reporte-manejo bg-white">
+    <div class="container">
+      <h2 class="seccion-titulo">Reporte de Manejo</h2>
+      <p>Completa el siguiente formulario para reportar detalles importantes sobre el manejo de la carga o cualquier incidencia durante el transporte.</p>
+
+      <form id="form-reporte" class="formulario-reporte" action="https://formsubmit.co/transporte-carranza@hotmail.com" method="POST" target="_blank">
+        <input type="hidden" name="_captcha" value="false">
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="fecha">Fecha del reporte</label>
+            <input type="date" id="fecha" name="Fecha" required />
+          </div>
+
+          <div class="form-group">
+            <label for="chofer">Nombre del chofer</label>
+            <input type="text" id="chofer" name="Chofer" placeholder="Ej. Carlos Gómez" required />
+          </div>
+
+          <div class="form-group">
+            <label for="vehiculo">Número o placa del vehículo</label>
+            <input type="text" id="vehiculo" name="Vehiculo" placeholder="Ej. P123-456" required />
+          </div>
+
+          <div class="form-group" style="grid-column: 1 / -1;">
+            <label for="descripcion">Descripción del reporte</label>
+            <textarea id="descripcion" name="Descripción" rows="5" placeholder="Escribe aquí los detalles del reporte..." required></textarea>
+          </div>
+
+          <div class="form-group" style="grid-column: 1 / -1;">
+            <label for="contacto-reporte">Contacto (nombre y teléfono)</label>
+            <input type="text" id="contacto-reporte" name="Contacto" placeholder="Ej. Ana Pérez, 5555-1234" required />
+          </div>
+        </div>
+
+        <div class="form-boton">
+          <button type="submit" class="btn-cotiza">Enviar Reporte</button>
+        </div>
+      </form>
+
+      <div id="mensaje-reporte" style="display:none; margin-top:1rem; color:green; font-weight:bold;">
+        ¡Reporte enviado con éxito! ✔️
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section id="contacto" class="contacto bg-dark-gray">
+    <div class="container">
+      <h2 class="seccion-titulo">Contáctanos</h2>
+      <div class="contacto-grid">
+
+        <div class="contacto-info">
+          <p><strong>📍 Dirección:</strong> Natá,Coclé, Panamá</p>
+          <p><strong>📞 Celular:</strong> </p>
+          <ul style="list-style: none; padding-left: 0;">
+            <li><a href="tel:+50766749040"> +507 6674-9040</a></li>
+            <li><a href="tel:+50761234567"> +507 6780-8030</a></li>
+          </ul>
+          <p><strong>📞Teléfono:</strong> <a href="tel:+50760001111">+507 993-6649</a></p>
+          <p><strong>📧 Correo:</strong> <a href="mailto:info@transportelogistico.com">transporte-carranza@hotmail.com</a></p>
+        </div>
+
+        <div class="contacto-mapa">
+         
+     <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d263.43547382586485!2d-80.52416481131795!3d8.334861315577422!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2spa!4v1753811195303!5m2!1sen!2spa" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section id="nosotros" class="nosotros bg-white">
+    <div class="container">
+      <h2 class="seccion-titulo">Sobre Nosotros</h2>
+      <div class="nosotros-grid">
+
+        <div class="nosotros-card">
+          <h3>Misión</h3>
+          <p>Brindar soluciones de transporte de carga seguras, puntuales y adaptadas a las necesidades de cada cliente, contribuyendo al crecimiento logístico de Panamá.</p>
+        </div>
+
+        <div class="nosotros-card">
+          <h3>Visión</h3>
+          <p>Ser la empresa de transporte de carga líder en Panamá por eficiencia, compromiso y tecnología aplicada al servicio.</p>
+        </div>
+
+        <div class="nosotros-card">
+          <h3>Experiencia</h3>
+          <p>Contamos con más de <strong> 26 años de experiencia</strong> en el transporte de carga seca, refrigerada, cisternas y mesas a nivel nacional.</p>
+        </div>
+
+        <div class="nosotros-card">
+          <h3>Flota y Equipo</h3>
+          <p>Nuestra flota incluye camiones modernos, refrigerados, cisternas y plataformas, operados por un equipo altamente capacitado y comprometido con la seguridad y puntualidad.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p> 2025 TRANSPORTE CARRANZA S.A</p>
+    </div>
+  </footer>
+
+</body>
+</html>
